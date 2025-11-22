@@ -21,10 +21,6 @@ image::plate_example.svg[align=center,link=plate_example.svg]
 [[problem-statement]]
 == Problem Statement
 
-
-
-
-
 Each cell's temperature will change after a period `Δt` based on <<heat-equation>>, where each cell depens on:
 
   . The temperature given by the neighbor cells (excluding diagonals) as stem:[T^{k}_{i-1,j}+T^{k}_{i,j+1}+T^{k}_{i+1,j}+T^{k}_{i,j-1}].
