@@ -9,7 +9,7 @@ Alejandro Guerra Rodríguez, alejandro.guerrarodriguez@ucr.ac.cr
 :stem: latexmath
 :toc: left
 
-This program provides a way to simulate heat transfer in a plate. In a real scenario, a scientist will apply constant heat in the plate borders and track the behaviour until equilibrium is reached. This state is achieved at the moment where each point of the plate does not change its temperature with time (or change is under a stablished margin). For simulation purposes, the plate will be considered as a matrix of `R` rows and `C` columns, with square cells of size `h`. 
+This program provides a way to simulate heat transfer in a plate. In a real scenario, a scientist will apply constant heat to the plate borders and track the behavior until equilibrium is reached. This state is achieved when each point of the plate does not change its temperature with time (or the change is under an established margin). For simulation purposes, the plate will be considered as a matrix of `R` rows and `C` columns, with square cells of size `h`. 
 
 [[matrix-heat-simulation]]
 .Representation of the plate in the simulation. footnote:[Image adapted from https://jeisson.ecci.ucr.ac.cr/concurrente/2025b/tareas/#problem_statement[Problem Statement].]
@@ -46,10 +46,10 @@ When executed, the simulation reads a work file that contains the input plate an
   . Plate file path relative to the work file.
   . Time step in seconds.
   . Thermal diffusivity.
-  . Dimentions.
+  . Dimensions.
   . Thermal sensitivity.
 
-IMPORTANT: If a cell temperature changes is lower than the thermal sensitivity, then the cell is at equilibrium. The plate equilibrium is when every cell reaches equilibrium.
+IMPORTANT: If a cell temperature change is lower than the thermal sensitivity, then the cell is at equilibrium. The plate equilibrium is when every cell reaches equilibrium.
 
 .Work file example
 [source,txt]
@@ -61,7 +61,7 @@ plate001.bin  1200  127  1000  0.1
 plate002.bin    60 0.08   450  0.075
 ----
 
-For each line, the simulation will be computed. Then, a report file with the work file statistics and one binary file for each plate processed with the resulting state, will be generated.
+For each line, the simulation will be computed. Then, a report file with the work file statistics and one binary file for each plate processed with the resulting state will be generated.
 
 .Report file example
 [source,txt]
@@ -78,7 +78,7 @@ IMPORTANT: The new parameters are the number of states `k` until thermal equilib
 [[user-manual]]
 == User Manual
 
-To use this simulation, first be sure to have make and gcc installed. Otherwise, do it with the following commands:
+To use this simulation, first be sure to have installed make and gcc installed. Otherwise, do so with the following commands:
 
 [source,bash]
 ----
@@ -86,14 +86,14 @@ sudo apt update
 sudo apt install build-essential
 ----
 
-In the repository, a makefile is provided to facilitate with the compilation and execution of the proyect. It can be used in the following way:
+In the repository, a makefile is provided to facilitate the compilation and execution of the projet. It can be used in the following way:
 
 [source,bash]
 ----
-# To compile the proyect
+# To compile the projet
 make
 
-# To run the proyect with required CLI arguments
+# To run the projet with required CLI arguments
 make run ARGS='work_directory work_file output_directory thread_number'
 
 # To delete the generated files while compilation
