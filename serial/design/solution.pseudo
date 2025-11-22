@@ -1,3 +1,4 @@
+// TODO (ale): Rearrange structs to avoid padding when not needed and to use it to avoid false-sharing
 procedure main(argc, argv) do
   run_simulation (argc, argv)
 end procedure
