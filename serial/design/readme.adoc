@@ -1,0 +1,38 @@
+[[title]]
+= Design of solution
+
+Alejandro Guerra Rodríguez, alejandro.guerrarodriguez@ucr.ac.cr
+
+:nofooter:
+:source-highlighter: pygments
+:stem:
+:toc:
+:xrefstyle: short
+
+[[memory_layout]]
+== Memory Layout
+
+The plate will be stored as a matrix of `R` rows and `C` columns as shown in <<matrix_memory_layout>>.
+
+[[matrix_memory_layout]]
+.Memory Layout for the Plate Matrix (click to open original)
+image::MatrixMemoryManagement.svg[align=center, link=MatrixMemoryManagement.svg]
+
+Also, the simulation data will be saved in the following structs:
+
+// TODO (you): Add structs .svg when finished
+
+
+[[procedural_design]]
+== Procedural design
+
+This section contains the general worflow of the solution. The code is divided into different files to keep modularization and clarity.
+
+[#pseudocode]
+.Pseudocode
+[source,delphi]
+----
+include::solution.pseudo[]
+----
+
+link:solution.pseudo[Open pseudocode file]
