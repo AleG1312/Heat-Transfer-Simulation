@@ -1,0 +1,71 @@
+procedure main(argc, argv) do
+  run_simulation (argc, argv)
+end procedure
+
+procedure run_simulation (argc, argv) do
+  // Analyze CLI inputs
+  inputs := analyze_arguments(argc, argv)
+
+  // Open work and report files
+  work := open(inputs.work_file, "read")
+  report := open(inputs.report_file, "write")  // Creates empty file
+
+  for line in work do
+    data := obtain_simulation_data(inputs, line)
+    result := compute(data)
+    write(report, simulation_result)
+  end for
+
+  close(work)
+  close(report)
+
+end procedure
+
+procedure analyze_arguments (argc, argv) do
+  // TODO (ale): Check if the struct cover the minimum required values
+  // Allocate memory for the struct
+  inputs := new CLI_inputs()
+
+  // Extract provided arguments
+  inputs.work_directory := argv[0]
+  inputs.work_filename := argv[1]
+  inputs.report_directory := argv[2]
+
+  // Build paths
+  inputs.work_file := argv[0] + work_filename
+  inputs.report_file := argv[2] + work_filename
+  change_extension(inputs.report_file, ".out")
+
+  // Set thread count
+  inputs.thread_count := system_CPUs
+  if argc == 4 do
+    inputs.thread_count := argv[3]
+  end if
+
+  return inputs
+end procedure
+
+procedure obtain_simulation_data (inputs, line) do
+  // TODO (ale): Check if the struct cover the minimum required values
+  // Allocate memory for the struct
+  data := new simulation_data()
+
+  // Extract line information
+  plate_filename := argv[0]
+  data.plate_file := line[0]
+  data.time_step := line[1]
+  data.thermal_diffusivity := line[2]
+  data.dimensions := line[3]
+  data.thermal_sensitivity := line[4]
+
+  // Build paths
+  data.plate_file := inputs.report_directory + plate_filename
+
+  return data
+end procedure
+
+procedure compute(data) do
+  // TODO (ale): Finish method
+end procedure
+
+// TODO (ale): Finish missing methods
