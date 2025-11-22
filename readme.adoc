@@ -5,9 +5,11 @@ Alejandro Guerra Rodríguez, alejandro.guerrarodriguez@ucr.ac.cr
 
 :doctype: article
 :imagesdir: img
+:nofooter:
 :sectnums:
 :stem: latexmath
 :toc: left
+:xrefstyle: short
 
 This program provides a way to simulate heat transfer in a plate. In a real scenario, a scientist will apply constant heat to the plate borders and track the behavior until equilibrium is reached. This state is achieved when each point of the plate does not change its temperature with time (or the change is under an established margin). For simulation purposes, the plate will be considered as a matrix of `R` rows and `C` columns, with square cells of size `h`. 
 
