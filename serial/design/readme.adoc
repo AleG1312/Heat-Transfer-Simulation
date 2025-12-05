@@ -12,7 +12,7 @@ Alejandro Guerra Rodríguez, alejandro.guerrarodriguez@ucr.ac.cr
 [[memory_layout]]
 == Memory Layout
 
-The plate will be stored as a matrix of `R` rows and `C` columns as shown in <<matrix_memory_layout>>.
+The plate will be stored as a matrix of double words with `R` rows and `C` columns as shown in <<matrix_memory_layout>>.
 
 [[matrix_memory_layout]]
 .Memory Layout for the Plate Matrix (click to open original)
@@ -26,7 +26,7 @@ Also, the simulation data will be saved in the following structs:
 [[procedural_design]]
 == Procedural design
 
-This section contains the general worflow of the solution. The code is divided into different files to keep modularization and clarity.
+This section contains the general workflow of the solution. The code is divided into different files to keep modularization and clarity.
 
 [#pseudocode]
 .Pseudocode
