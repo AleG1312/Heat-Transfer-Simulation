@@ -98,6 +98,54 @@ make run ARGS='work_directory work_file output_directory thread_number'
 make clean
 ----
 
+== Error Handling
+This project follows the POSIX convention for error codes. All supported codes are listed in <<error-codes>>. Note that the error code is placed in the `errno` variable.
+
+IMPORTANT: The *callee* is responsible for detecting errors. The *caller* is responsible for handling them, including reporting any error messages.
+
+
+[[error-codes]]
+.POSIX Error Codes (retrieved from ChatGPT)
+[cols="1,1,3", options="header"]
+|===
+|Code |Name |Description
+
+|1   |EPERM          |Operation not permitted.
+|2   |ENOENT         |No such file or directory.
+|3   |ESRCH          |No such process.
+|4   |EINTR          |Interrupted system call.
+|5   |EIO            |Input/output error.
+|6   |ENXIO          |No such device or address.
+|7   |E2BIG          |Argument list too long.
+|8   |ENOEXEC        |Exec format error.
+|9   |EBADF          |Bad file descriptor.
+|10  |ECHILD         |No child processes.
+|11  |EAGAIN         |Resource temporarily unavailable (non-blocking).
+|12  |ENOMEM         |Out of memory.
+|13  |EACCES         |Permission denied.
+|14  |EFAULT         |Bad address (invalid pointer).
+|16  |EBUSY          |Device or resource busy.
+|17  |EEXIST         |File exists.
+|19  |ENODEV         |No such device.
+|20  |ENOTDIR        |Not a directory.
+|21  |EISDIR         |Is a directory.
+|22  |EINVAL         |Invalid argument.
+|24  |EMFILE         |Too many open files (per process limit).
+|25  |ENOTTY         |Inappropriate ioctl for device (not a TTY).
+|30  |EROFS          |Read-only file system.
+|32  |EPIPE          |Broken pipe (peer closed connection).
+|35/11 |EWOULDBLOCK |Equivalent to EAGAIN (non-blocking socket).
+|36  |ENAMETOOLONG   |File name too long.
+|38  |ENOSYS         |Function not implemented.
+|39  |ENOTEMPTY      |Directory not empty.
+|60/61 |ETIMEDOUT    |Connection timed out.
+|104 |ECONNRESET     |Connection reset by peer.
+|111 |ECONNREFUSED   |Connection refused.
+|113 |EHOSTUNREACH   |No route to host.
+|115 |EINPROGRESS    |Operation in progress (non-blocking connect()).
+|===
+
+
 == References
 
 [1] Jeisson Hidalgo. *Concurrent Programming — 2025b, Assignment Description*. 
