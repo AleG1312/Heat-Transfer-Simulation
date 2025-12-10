@@ -14,6 +14,4 @@ typedef struct shared_data {
   size_t thread_count;
 } shared_data_t;
 
-shared_data_t* shared_data_create(int&);
-
 #endif  // SHARED_DATA
