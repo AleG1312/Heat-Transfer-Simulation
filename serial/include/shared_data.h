@@ -16,7 +16,7 @@ typedef struct shared_data {
   // Build later
   char* work_file_path;
   char* report_file_path;
-  
+
   // Work file content
   char* plate_file;
   char* plate_file_path;
