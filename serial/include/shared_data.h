@@ -8,10 +8,13 @@
 #include <stdlib.h>
 
 typedef struct shared_data {
+  // CLI parameters
   char* work_directory;
   char* work_file;
   char* output_directory;
-  size_t thread_count;
+  // Build later
+  char* work_file_path;
+  char* report_file_path;
 } shared_data_t;
 
 #endif  // SHARED_DATA
