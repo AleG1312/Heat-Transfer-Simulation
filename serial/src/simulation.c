@@ -5,6 +5,7 @@
 
 #include "../include/shared_data.h"
 #include "../include/util.h"
+#include "../include/work_file.h"
 
 int run_simulation(int argc, char* argv[]) {
   int error = 0;
@@ -23,6 +24,10 @@ int run_simulation(int argc, char* argv[]) {
         "<output directory>\"\n");
     return error;
   }
+
+  error = process_work_file(shared_data);
+
+  return error;
 
 }
 
