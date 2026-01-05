@@ -3,6 +3,8 @@
 
 #include "shared_data.h"
 
-int process_work_file (shared_data_t* shared_data);
+int process_work_file (shared_data_t*);
+
+int append_to_report(shared_data_t*);
 
 #endif  // WORK_FILE

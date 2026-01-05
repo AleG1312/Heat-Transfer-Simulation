@@ -26,8 +26,22 @@ int process_work_file (shared_data_t* shared_data) {
     // Process the plate file
     error = process_plate_file(shared_data, buffer);
 
-    // TODO(you):Add to the general report
+    if (!error) {
+
+    }
+
+    // Append the statistics to the general report
+    error = append_to_report(shared_data);
+
+    if (!error) {
+
+    }
+
   }
 
   return error;
+}
+
+int append_to_report(shared_data_t* shared_data) {
+
 }
