@@ -3,6 +3,7 @@
 #include <errno.h>
 #include <stdio.h>
 
+#include "../include/plate_file.h"
 #include "../include/shared_data.h"
 
 int process_work_file (shared_data_t* shared_data) {
@@ -23,8 +24,9 @@ int process_work_file (shared_data_t* shared_data) {
   // Read every line in the work file
   while (fgets(buffer, 256, w_file)) {
     // Process the plate file
+    error = process_plate_file(shared_data, buffer);
 
-    // Generate a report
+    // TODO(you):Add to the general report
   }
 
   return error;
