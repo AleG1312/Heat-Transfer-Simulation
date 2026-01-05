@@ -99,10 +99,9 @@ make clean
 ----
 
 == Error Handling
-This project follows the POSIX convention for error codes. All supported codes are listed in <<error-codes>>. Note that the error code is placed in the `errno` variable.
+This project follows the POSIX convention for error codes. All supported codes are listed in <<error-codes>>. Note that the error code is placed in the `errno` variable. 
 
-IMPORTANT: The *callee* is responsible for detecting errors. The *caller* is responsible for handling them, including reporting any error messages.
-
+IMPORTANT: The error messages will be displayed in a log file.
 
 [[error-codes]]
 .POSIX Error Codes (retrieved from ChatGPT)
